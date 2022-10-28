@@ -1,0 +1,155 @@
+#our-contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+
+  padding: 0 90px;
+  background-image: url('../../assets/backgrounds/white-concrete-wallpaper.png');
+  background-size: cover;
+}
+
+#our-contact-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+}
+
+.our-contact-title {
+  font-family: 'FrederickGreatong';
+  font-size: 70px;
+  color: #D2A340;
+  font-weight: 300;
+  text-align: center;
+  margin: 30px 0;
+}
+
+#our-address-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+#our-address-hours address {
+  font-family: 'Sen';
+  color: #5C3D02;
+  font-weight: bold;
+}
+
+#our-address-hours address .address-city-name {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.opening-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.row .weekday {
+  font-family: 'Sen';
+  font-weight: 800;
+  color: #5C3D02;
+}
+
+.row .hour {
+  font-family: 'Sen';
+  font-weight: bold;
+  color: #5C3D02;
+  font-size: 16px;
+}
+
+.call-button {
+  padding: 10px 0;
+  font-family: 'Sen';
+  font-weight: bold;
+  font-size: 20px;
+
+  background: none;
+  border: 3px solid #5C3D02;
+  border-radius: 40px;
+  color: #5C3D02;
+}
+
+
+#gallery {
+  display: flex;
+  height: 400px;
+}
+
+#gallery .first-column {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+#gallery .first-column img {
+  width: 200px;
+  height: 120px;
+}
+
+
+.highlighted-image img {
+  height: 400px;
+}
+
+
+@media (max-width:1024px) {
+  .our-contact-title {
+    font-size: 50px;
+  }
+
+  #our-contact-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  #gallery .first-column img {
+    width: 140px;
+    height: 80px;
+  }
+
+
+  .highlighted-image img {
+    height: 280px;
+  }
+}
+
+@media (max-width:700px) {
+  #our-contact-container{
+    padding: 0 10px;
+  }
+  #our-contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .our-contact-title {
+    font-size: 50px;
+  }
+}
+
+
+@media (max-width:600px){
+  
+  #our-contact-info {
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width:505px){
+  #gallery{
+    display: none;
+  }
+}

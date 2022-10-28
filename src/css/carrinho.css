@@ -1,0 +1,164 @@
+#carrinho-container {
+  margin: auto;
+  padding: 20px 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+}
+
+
+table th,
+table td {
+  padding: 12px 15px;
+}
+
+table thead tr th {
+  font-family: 'Sen';
+  color: #5C3D02;
+  font-weight: 200;
+  text-align: left;
+}
+
+table thead tr {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 400px 1fr 1fr;
+}
+
+table tbody tr {
+  border: 3px solid #D2A340;
+  border-radius: 10px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 400px 1fr 1fr;
+  margin-bottom: 10px;
+}
+
+.product-data {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.product-data img {
+  width: 50px;
+}
+
+.product-data,
+.quantity-product p,
+.total-price p {
+  font-family: 'Sen';
+  font-size: 16px;
+  font-weight: 600;
+  color: #5C3D02;
+}
+
+.quantity-product {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 15px;
+}
+
+.quantity-product .quant-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity-product .quant-btns button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 1px solid #5C3D02;
+  border-radius: 50%;
+}
+
+
+.pedido-stats {
+  width: 300px;
+  border: 3px solid #D2A340;
+  border-radius: 10px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pedido-stats strong {
+  font-family: 'Sen';
+  font-size: 16px;
+  color: #5C3D02;
+}
+
+.pedido-stats hr {
+  border-color: #D2A340;
+  height: 2px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.pedido-stats div {
+  font-family: 'Sen';
+  font-size: 16px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.cart-shop-btn {
+  width: 100px;
+  padding: 10px 5px;
+  margin: 20px auto;
+  font-size: 16px;
+  font-family: 'Sen';
+  font-weight: 400;
+  border-radius: 40px;
+  border: 2px solid #D2A340;
+  color: #D2A340;
+  background: none;
+  cursor: pointer;
+}
+
+@media (max-width:768px){
+
+  #carrinho-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 9px 5px;
+    
+  }
+
+  table{
+    margin: auto;
+  }
+  table thead tr {
+    display: flex;
+  }
+  
+  table tbody tr {
+    display: flex;
+  }
+
+  .pedido-stats{
+    margin: auto;
+    width: 50%;
+  }
+
+  .product-data{
+    gap: 3px;
+  }
+}
+
+
+@media (max-width:425px){
+  .pedido-stats{
+    width: 90%;
+  }
+}

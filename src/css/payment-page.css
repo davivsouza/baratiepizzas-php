@@ -1,0 +1,265 @@
+body{
+  background-image: url('/assets//backgrounds/white-concrete-wallpaper.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+#payment-container{
+  max-width: 100vw;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.payment-stages{
+  width: 70%;
+  margin: 0 auto 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  margin-top: 40px;
+
+}
+
+.line{
+  width: 130px;
+  background: #5C3D02;
+  border-radius: 10px;
+  height: 2px;
+}
+
+.stages-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+}
+
+.stages{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+  font-size: 25px;
+  font-family: 'Sen';
+  font-weight: bolder;
+  color: #5C3D02;
+
+  border-radius: 50%;
+  border: 2px solid #5C3D02;
+  padding: 20px;
+}
+.stages img{
+  width: 30px;
+}
+.stage-name{
+  font-family: 'Sen';
+  font-weight: bold;
+  color: #5C3D02;
+  font-size: 12px;
+  text-align: center;
+}
+
+.payment-form{
+  width: 90%;
+  margin: 0 auto 50px;
+  border-top: 2px solid #D2A340;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.payment-form fieldset{
+  display: none;
+  border: none;
+  margin-top: 50px;
+}
+.payment-form fieldset.stage-1-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: right;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.payment-form fieldset.stage-2-container{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-form fieldset.stage-3-container{
+  max-width: 500px;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-top: 50px;
+
+}
+
+.payment-labels{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-family: 'Sen';
+  font-size: 16px;
+  color: #5C3D02;
+  font-weight: bold;
+}
+
+.payment-labels input{
+  width: 300px;
+  border: 2px solid #D2A340;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: 'Sen';
+  font-size: 16px;
+  background: transparent;
+}
+
+
+.next-stage-btn,
+.finish_payment{
+  width: 200px;
+  padding: 10px 0px;
+  font-size: 20px;
+  font-family: 'Sen';
+  font-weight: 400;
+  border-radius: 40px;
+  border: 2px solid #D2A340;
+  color: #D2A340;
+  background: none;
+  cursor: pointer;
+  align-self: center;
+  
+}
+
+.finish_payment {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.payment-methods{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.credit-card-form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: right;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+
+.address-delivery{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  border: 2px solid #D2A340;
+  padding: 20px;
+  margin-bottom: 20px;
+
+}
+
+.address-delivery strong{
+  font-family: 'Sen';
+  color: #5C3D02;
+  margin-bottom: 20px;
+}
+
+.address-delivery p, .address-delivery span{
+  font-family: 'Sen';
+}
+
+.address-delivery .client-name{
+  font-size: 16px;
+  color: #5C3D02;
+}
+
+.address-delivery .client-address{
+  font-family: 'Sen';
+  color: #5C3D02;
+  font-size: 16px;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.payment-method-list{
+  list-style: none;
+}
+
+.payment-method-list-item{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-method-list-item img{
+  width: 80px;
+}
+
+.payment-method-list-item span{
+  color: #5C3D02;
+  font-size: 14px;
+}
+
+.final_result{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+@media (max-width:638px){
+  .payment-labels input{
+    width: 100%;
+  }
+}
+
+@media (max-width:425px){
+  #payment-container{
+    padding: 8px;
+  }
+  .payment-form fieldset.stage-1-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-end;
+    gap: 30px;
+  }
+  
+  .payment-labels{
+    flex-wrap: nowrap;
+  }
+  .payment-labels input{
+    width: 200px;
+  }
+
+  .address-delivery{
+    width: 100%;
+    margin: auto;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,199 @@
+.pop-up-buy-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #00000095;
+
+  align-items: center;
+  justify-content: center;
+
+  display: none;
+}
+
+
+.pop-up-buy-content img {
+  width: 100%;
+}
+
+.pop-up-buy-content {
+  max-width: 400px;
+  width: 90%;
+  border-radius: 10px 10px 0 0;
+  background-image: url('/assets/backgrounds/white-concrete-wallpaper.png');
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  animation: popup .4s ease-in-out;
+  transition: all .2s ease-in;
+}
+
+.pizza-name {
+  font-size: 20px;
+  font-family: 'Sen';
+  font-weight: bold;
+  color: #D2A340;
+  text-align: center;
+}
+
+.pizza-description,
+.ingredients {
+  font-family: 'Sen';
+  color: #5C3D02;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.tipo-pizza p {
+  font-family: 'Sen';
+  color: #5C3D02;
+  font-size: 14px;
+  padding-left: 10px;
+  margin: 10px 0;
+}
+
+.tipo-pizza-options {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-left: 10px;
+}
+
+.tipo-pizza-options button {
+  width: 100px;
+  font-family: 'Sen';
+  font-weight: bold;
+  color: #D2A340;
+  border: 2px solid #D2A340;
+  border-radius: 40px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.flex-box {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  place-content: center;
+  gap: 10px;
+  padding-left: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.row p {
+  font-size: 14px;
+}
+
+.row p.pizza-price {
+  font-size: 24px;
+  font-family: 'Sen';
+  color: #D2A340;
+  font-weight: bold;
+  margin: 0;
+}
+
+.row .quantity-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row .quantity-btn button {
+  background: #D2A340;
+  color: #5C3D02;
+  border: none;
+  height: 30px;
+  width: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.row .quantity-btn div {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Sen';
+  color: #5C3D02;
+  background-color: #FFC958;
+}
+
+.pop-up-pay-btn {
+  border: 3px solid #D2A340;
+  border-radius: 40px;
+  color: #D2A340;
+  background: none;
+  margin: 20px auto 0;
+  padding: 5px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Sen';
+
+  cursor: pointer;
+  transition: all .2s ease-in;
+}
+
+.pop-up-pay-btn:hover {
+  filter: brightness(0.9);
+}
+
+
+.pop-up-close-btn{
+  width: 20px;
+  height: 20px;
+  background: #D2A340;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Sen';
+  padding: 10px;
+  
+  border: none;
+  border-radius: 50%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 6px;
+  right: 6px;
+
+  cursor: pointer;
+}
+
+
+@keyframes popup {
+  0%{
+    transform: scale(0);
+  }
+
+  
+
+  100%{
+    transform: scale(1);
+  }
+}
+
+@media (max-width:375px){
+  .row .quantity-btn div {
+    width: 50px;
+  }
+}

@@ -1,0 +1,30 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  position: relative;
+  overflow-x: hidden;
+}
+
+button{
+  transition: all .2s ease-in;
+}
+button:hover{
+  filter: brightness(0.9);
+}
+
+
+
+
+@font-face{
+  font-family: 'Adeffis';
+  src: url('../fonts/Adefisspersonal.otf') format("opentype");
+}
+@font-face {
+  font-family: 'FrederickGreatong';
+  src: url('../fonts/FrederickGreatong.otf') format("opentype");
+}

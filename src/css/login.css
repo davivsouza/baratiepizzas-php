@@ -1,0 +1,183 @@
+#login-page-container {
+  position: relative;
+  background-image: url('../../assets/backgrounds/background-home.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+
+
+.form-container {
+  position: absolute;
+  max-width: 600px;
+  right: 30px;
+  top: 50vh;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+
+.form-header-text {
+  font-family: 'Adeffis';
+  font-size: 90px;
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.form-header-sub {
+  font-family: 'Sen';
+  font-size: 16px;
+  font-weight: bolder;
+
+  color: #D7D7D7;
+  margin-top: 10px;
+}
+
+
+#login-form {
+  margin-top: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+#login-form #email,
+#login-form #senha {
+  width: 500px;
+  font-family: 'Sen';
+  font-size: 18px;
+  font-weight: 200;
+  color: #fff;
+
+  outline: none;
+  border: none;
+  border-bottom: 3px solid #FFC958;
+  background: none;
+
+  padding: 10px 20px 15px 0;
+}
+#login-form #email::placeholder,
+#login-form #senha::placeholder{
+  color: #fff;
+}
+#remember-me-form-control {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Sen';
+}
+
+#remember-me-form-control input[type="checkbox"] {
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+  font: inherit;
+  color: #FFC958;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid #FFC958;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+
+}
+
+#remember-me-form-control input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transition: .12s transform ease-in-out;
+  box-shadow: inset 1em 1em #FFC958;
+}
+
+#remember-me-form-control input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+#login-form .submit-button {
+  width: 200px;
+  margin: 40px auto;
+  padding: 10px 0px;
+  font-size: 20px;
+  font-family: 'Sen';
+  font-weight: 400;
+  border-radius: 40px;
+  border: 2px solid #FFC958;
+  color: #FFC958;
+  background: none;
+
+}
+
+.form-register-redirect-link {
+  align-self: center;
+  font-size: 16px;
+  font-family: 'Sen';
+  font-weight: 400;
+  color: #fff;
+}
+
+.form-register-redirect-link a {
+  color: #FFC958;
+  text-decoration: underline #FFC958;
+}
+
+/* @media screen and (min-width:1440px) {
+  .form-header-container {
+    width: 900px;
+  }
+  
+  .form-header-text {
+    font-family: 'Adeffis';
+    font-size: 170px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  #main .description-slogan {
+    font-size: 20px;
+  }
+} */
+
+
+@media (max-width:768px) {
+  .form-header-text {
+    font-size: 70px;
+  }
+  
+
+ 
+  .form-container {
+    text-align: center;
+  }
+
+  #login-form #email,
+  #login-form #senha {
+    width: 100%;
+  }
+}
+
+@media (max-width:425px){
+  .form-container {
+    left: 10px;
+  }
+  .form-header-text {
+    font-size: 50px;
+  }
+  #login-form{
+    justify-content: center;
+  }
+ 
+}

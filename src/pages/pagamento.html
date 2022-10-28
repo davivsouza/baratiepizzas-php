@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../scripts/payment.js" defer></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/site.webmanifest">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/payment-page.css">
+  <link rel="stylesheet" href="../css/radioButton.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+  <title>Baratie Pizzas | Pagamento</title>
+</head>
+
+<body>
+  <header id="header">
+    <nav class="nav-container">
+      <ul class="nav-menu">
+        <div class="first-column">
+          <li class="nav-menuitem logo">
+            <a href="/">
+              <img src="/assets/icons/logo.svg" alt="Baratie Pizzas">
+            </a>
+          </li>
+          <li class="nav-menuitem"><a href="/">Home</a></li>
+          <li class="nav-menuitem"><a href="./cardapio.html">Cardápio</a></li>
+          <li class="nav-menuitem"><a href="./contato.html">Contato</a></li>
+        </div>
+        <div class="second-column">
+          <li class="nav-menuitem phone">
+            <img src="/assets/icons/phone.svg" alt="Telefone">
+            <span>
+              704-914-3052
+            </span>
+          </li>
+          <li class="user">
+            <a href="./login.html" title="Login/Registro">
+              <img src="/assets/icons/account.svg" alt="Cadastrar-se/Logar">
+            </a>
+          </li>
+          <li class="carrinho">
+            <a href="./carrinho.html">
+              <img src="/assets/icons/shopping-cart.svg" alt="Carrinho">
+            </a>
+          </li>
+        </div>
+      </ul>
+      <div class="navbar">
+        <div class="navbar-container container">
+          <input type="checkbox" name="" id="">
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+          <ul class="menu-items">
+            <li class="nav-menuitem"><a href="/">Home</a></li>
+            <li class="nav-menuitem"><a href="./cardapio.html">Cardápio</a></li>
+            <li class="nav-menuitem"><a href="./contato.html">Contato</a></li>
+            <li class="nav-menuitem phone"><img src="/assets/icons/phone.svg" alt="Telefone"><span>704-914-3052</span>
+            </li>
+            <li class="user">
+              <a href="./login.html" title="Login/Registro">
+                <img src="/assets/icons/account.svg" alt="Cadastrar-se/Logar">
+                Login/Register
+              </a>
+              
+            </li>
+            <li class="carrinho">
+              <a href="./carrinho.html">
+                <img src="/assets/icons/shopping-cart.svg" alt="Carrinho">
+                Carrinho
+              </a>
+            </li>
+          </ul>
+          <li class="nav-menuitem logo">
+            <a href="/">
+              <img src="/assets/icons/logo.svg" alt="Baratie Pizzas">
+            </a>
+          </li>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="payment-container">
+    <section class="payment-stages">
+      <div class="line"></div>
+
+      <div class="stages-container">
+        <p class="stages">1</p>
+        <span class="stage-name">Detalhes</span>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="stages-container">
+        <p class="stages">2</p>
+        <span class="stage-name">Método de Pagamento</span>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="stages-container">
+        <p class="stages">3</p>
+        <span class="stage-name">Confirmar</span>
+      </div>
+
+      <div class="line"></div>
+    </section>
+
+    <form action="" class="payment-form">
+      <fieldset class="stage-1-container">
+        <label for="name" class="payment-labels">
+          Nome Completo
+          <input type="text" id="name" name="name">
+        </label>
+
+        <label class="payment-labels" for="phone">
+          Celular
+          <input type="text" name="phone" id="phone">
+        </label>
+
+        <label class="payment-labels" for="cep">
+          CEP
+          <input type="text" name="cep" id="cep">
+        </label>
+
+        <label class="payment-labels" for="cpf">
+          CPF
+          <input type="text" name="cpf" id="cpf">
+        </label>
+
+        <label class="payment-labels" for="address">
+          Endereço
+          <input type="text" name="address" id="address">
+        </label>
+
+        <label class="payment-labels" for="house-number">
+          Número
+          <input type="number" id="house-number" name="house-number">
+        </label>
+      </fieldset>
+      <fieldset class="stage-2-container">
+        <div class="payment-methods">
+          <label class="custom-radio-button" for="pix">
+            <input type="radio" name="metodo_pagamento" id="pix" value="pix">
+          </label>
+
+          <label class="custom-radio-button" for="pagar_na_entrega">
+            <p>Pagar na entrega</p>
+            <input type="radio" name="metodo_pagamento" id="pagar_na_entrega" value="pagar_na_entrega">
+          </label>
+        </div>
+        <!-- <div class="credit-card-form">
+          <label for="numero_cartao" class="payment-labels">
+            Número do Cartão
+            <input type="text" name="numero_cartao" id="numero_cartao">
+          </label>
+          <label for="dono_cartao"  class="payment-labels">
+            Dono do Cartão
+            <input type="text" name="dono_cartao" id="dono_cartao">
+          </label>
+          <label for="data_expiracao"  class="payment-labels">
+            Data de Expiração
+            <input type="text" name="data_expiracao_mes" id="data_expiracao_mes">
+            <input type="text" name="data_expiracao_dia" id="data_expiracao_dia">
+          </label>
+          <label for="cvc"  class="payment-labels">
+            CVC
+            <input type="text" name="cvc" id="cvc">
+          </label>
+        </div> -->
+      </fieldset>
+      <fieldset class="stage-3-container">
+        <div class="address-delivery">
+          <strong>Endereço de Envio</strong>
+          <p class="client-name">Halisson Aparecido Lima</p>
+          <address class="client-address">
+            Rua Alphavilla 214
+            Alphavilla - SP
+            09112080
+          </address>
+          <strong>Forma de pagamento</strong>
+          <ul class="payment-method-list">
+            <li class="payment-method-list-item">
+              <img src="/assets/icons/pix.png" alt="Pix"> 
+             <span>Pizza Grega</span>
+            </li>
+          </ul>
+          <div class="final_result">
+            <p>Total: </p>
+            <span>R$ 62,00</span>
+          </div>
+        </div>
+        <button type="submit" class="finish_payment">
+          Finalizar Compra
+        </button>
+      </fieldset>
+      <button type="button" class="next-stage-btn">
+        Continuar
+      </button>
+    </form>
+   
+  </main>
+</body>
+
+</html>

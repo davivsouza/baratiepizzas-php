@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/site.webmanifest">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/registro.css">
+  <link rel="stylesheet" href="../css/radioButton.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+  <script src="../scripts/register.js" defer></script>
+  <title>Baratie Pizzas | Login</title>
+</head>
+
+<body>
+  <header id="header">
+    <nav class="nav-container">
+      <ul class="nav-menu">
+        <div class="first-column">
+          <li class="nav-menuitem logo">
+            <a href="/">
+              <img src="/assets/icons/logo.svg" alt="Baratie Pizzas">
+            </a>
+          </li>
+          <li class="nav-menuitem"><a href="/">Home</a></li>
+          <li class="nav-menuitem"><a href="./cardapio.html">Cardápio</a></li>
+          <li class="nav-menuitem"><a href="./contato.html">Contato</a></li>
+        </div>
+        <div class="second-column">
+          <li class="nav-menuitem phone">
+            <img src="/assets/icons/phone.svg" alt="Telefone">
+            <span>
+              704-914-3052
+            </span>
+          </li>
+          <li class="user">
+            <a href="./login.html" title="Login/Registro">
+              <img src="/assets/icons/account.svg" alt="Cadastrar-se/Logar">
+            </a>
+          </li>
+          <li class="carrinho">
+            <a href="./carrinho.html">
+              <img src="/assets/icons/shopping-cart.svg" alt="Carrinho">
+            </a>
+          </li>
+        </div>
+      </ul>
+      <div class="navbar">
+        <div class="navbar-container container">
+          <input type="checkbox" name="" id="">
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+          <ul class="menu-items">
+            <li class="nav-menuitem"><a href="/">Home</a></li>
+            <li class="nav-menuitem"><a href="./cardapio.html">Cardápio</a></li>
+            <li class="nav-menuitem"><a href="./contato.html">Contato</a></li>
+            <li class="nav-menuitem phone"><img src="/assets/icons/phone.svg" alt="Telefone"><span>704-914-3052</span>
+            </li>
+            <li class="user">
+              <a href="./login.html" title="Login/Registro">
+                <img src="/assets/icons/account.svg" alt="Cadastrar-se/Logar">
+                Login/Register
+              </a>
+              
+            </li>
+            <li class="carrinho">
+              <a href="./carrinho.html">
+                <img src="/assets/icons/shopping-cart.svg" alt="Carrinho">
+                Carrinho
+              </a>
+            </li>
+          </ul>
+          <li class="nav-menuitem logo">
+            <a href="/">
+              <img src="/assets/icons/logo.svg" alt="Baratie Pizzas">
+            </a>
+          </li>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="register-page-container">
+    <form action="../php/register.php" method="post" class="register-form-container">
+      <fieldset class="register-user-form">
+        <h1 class="register-page-header">Criando sua conta!</h1>
+        <input type="text" name="nome" id="nome" placeholder="Nome">
+        <input type="email" name="email" id="email" placeholder="E-mail">
+        <input type="password" name="senha" id="senha" placeholder="Senha">
+        <input type="text" name="fone" id="fone" placeholder="Celular">
+        <input type="text" name="cpf" id="cpf" placeholder="CPF">
+        <h1 class="register-page-header">Fale mais sobre você!</h1>
+        <input type="text" name="endereco" id="endereco" placeholder="Endereço">
+        <div class="register-grid-row">
+          <input type="text" name="cidade" class="cidade" id="cidade" placeholder="Cidade">
+          <input type="text" name="uf" class="uf" id="uf" placeholder="UF">
+          <input type="text" class="cep" id="cep" name="cep" placeholder="CEP">
+        </div>
+        <input type="text" name="bairro" class="bairro" id="Bairro" placeholder="Bairro">
+        <button type="submit" class="submit-button">Cadastrar-se</button>
+      </fieldset>
+    </form>
+  </main>
+</body>
+
+</html>

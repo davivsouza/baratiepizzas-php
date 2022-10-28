@@ -1,0 +1,360 @@
+/* --------------------------MAIN-------------------------- */
+
+
+#main {
+  position: relative;
+  background-image: url('../../assets/backgrounds/background-home.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+#main-content {
+  position: absolute;
+  width: 600px;
+  right: 30px;
+  top: 40vh;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-slogan {
+  font-family: 'Adeffis';
+  font-size: 120px;
+  color: #fff;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.main-slogan .highlighted {
+  color: #FFC958;
+}
+
+#main .description-slogan {
+  font-family: 'Sen';
+  color: #fff;
+  text-align: center;
+  margin-top: 40px;
+}
+
+#main .show-menu {
+  width: 240px;
+  height: 55px;
+  border-radius: 40px;
+  border: 3px solid #FFC958;
+  color: #FFC958;
+
+  font-family: 'Sen';
+  font-size: 20px;
+  font-weight: bold;
+
+  background: none;
+  margin-top: 50px;
+
+  cursor: pointer;
+  transition: all .1s ease-out;
+}
+
+#main .show-menu:hover {
+  filter: brightness(0.8);
+}
+
+
+/* --------------------------NOSSOS SERVIÇOS-------------------------- */
+#our-services-container {
+  background-image: url('../../assets/backgrounds/white-concrete-wallpaper.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.our-services-title {
+  font-family: 'FrederickGreatong';
+  font-size: 70px;
+  font-weight: 300;
+  color: #D2A340;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#our-services-cards-container {
+  display: flex;
+  align-items: flex-start;
+  justify-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+
+.our-services-card-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.our-services-card-icon {
+  border: 2px solid #D2A340;
+  padding: 25px;
+}
+
+.our-services-card-p,
+.our-services-card-description {
+  font-family: 'Sen';
+}
+
+.our-services-card-p {
+  font-size: 24px;
+  color: #5C3D02;
+}
+
+.our-services-card-description {
+  text-align: center;
+  font-size: 15px;
+}
+
+
+
+/* --------------------------NOSSO CARDÁPIO-------------------------- */
+#our-menu-container {
+  display: flex;
+  align-items: center;
+  background-image: url('../../assets/backgrounds/pizza-menu-texture.png');
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.our-menu-items-container {
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+}
+
+.our-menu-item-title {
+  font-family: 'FrederickGreatong';
+  font-size: 60px;
+  font-weight: 300;
+  color: #D2A340;
+  margin-top: 30px;
+}
+
+.our-menu-items {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px 40px 30px;
+  gap: 30px;
+}
+
+.our-menu-show-more {
+  font-family: Sen;
+  font-size: 16px;
+  width: 40%;
+  text-transform: uppercase;
+  color: #D2A340;
+  text-decoration: underline 2px #FFC958;
+  transition: all .2s ease-in;
+}
+
+.our-menu-show-more:hover {
+  filter: brightness(0.9)
+}
+
+/* --------------------------NOSSOS CHEFES------------------------- */
+#our-chefs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../assets/backgrounds/chefs-wallpaper-texture.png');
+  padding: 40px 10px;
+
+}
+
+.our-chefs-title {
+  font-family: 'FrederickGreatong';
+  font-size: 70px;
+  font-weight: 300;
+  color: #D2A340;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.our-chefs-card-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.our-chefs-card-item {
+  width: 290px;
+  height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 10px;
+  flex-direction: column;
+  gap: 20px;
+
+  border: 2px solid #D2A340;
+  line-height: 1.4;
+}
+
+.our-chefs-card-item .chef-name {
+  text-transform: uppercase;
+  color: #5C3D02;
+  font-family: 'Sen';
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.our-chefs-card-item .chef-description {
+  text-transform: uppercase;
+  color: #7A5A1E;
+  font-family: 'Sen';
+  font-weight: 300;
+  font-size: 13px;
+
+  width: 90%;
+  text-align: center;
+}
+
+@media screen and (min-width:1440px) {
+  #main-content {
+    width: 700px;
+    right: 90px;
+  }
+
+  .main-slogan {
+    font-size: clamp(130px, 1.5vw, 170px);
+  }
+
+  #main .description-slogan {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .our-menu-wallpaper {
+    display: none;
+  }
+
+  #our-services-cards-container {
+    flex-wrap: nowrap;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  #main-content {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+  .our-menu-wallpaper {
+    display: none;
+  }
+
+  .our-menu-items{
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #main-content {
+    width: 90%;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+  }
+
+  .main-slogan {
+    font-size: 90px;
+  }
+
+
+  .our-menu-wallpaper {
+    display: none;
+  }
+
+
+  .our-menu-item-title,
+  .our-chefs-title,
+  .our-services-title {
+    font-size: 50px;
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+@media (max-width:320px) {
+  #main {
+    height: 59vh;
+  }
+
+  .main-slogan {
+    font-size: 60px;
+  }
+
+  #our-services-container {
+    padding: 40px 10px;
+  }
+
+  #our-services-cards-container {
+    gap: 20px;
+  }
+
+
+  .our-services-card-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    gap: 10px;
+
+  }
+
+
+
+  .our-services-card-icon {
+    width: 120px;
+  }
+
+  .our-services-card-p {
+    font-size: 18px;
+    color: #5C3D02;
+  }
+
+  .our-services-card-description {
+    text-align: center;
+    font-size: 12px;
+  }
+
+}

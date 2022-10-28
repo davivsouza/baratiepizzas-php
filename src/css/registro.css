@@ -1,0 +1,155 @@
+#register-page-container {
+  position: relative;
+  background-image: url('../../assets/backgrounds/white-concrete-wallpaper.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.register-form-container{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.register-form-container fieldset{
+  border: none;
+  max-width: 600px;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.register-user-form{
+  display: flex;
+}
+
+.register-user-form button{
+  width: 200px;
+  margin: 40px auto;
+  padding: 10px 0px;
+  font-size: 20px;
+  font-family: 'Sen';
+  font-weight: 400;
+  border-radius: 40px;
+  border: 2px solid #D2A340;
+  color: #D2A340;
+  background: none;
+  cursor: pointer;
+}
+
+.register-address-form{
+  display: none;
+}
+
+.register-page-header{
+  font-size: 90px;
+  font-weight: 200;
+  font-family: 'Adeffis';
+  color: #D2A340;
+}
+
+
+
+.register-form-container input{
+  max-width: 500px;
+  width: 90vw;
+  font-family: 'Sen';
+  font-size: 18px;
+  font-weight:200;
+  color: #5C3D02;
+
+  outline: none;
+  border: none;
+  border-bottom: 3px solid #D2A340;
+  background: none;
+
+  padding: 10px 20px 15px 0;
+}
+
+.register-form-container input::placeholder{
+  color: #5C3D02;
+}
+
+
+.register-address-form .register-grid-row{
+  display: grid;
+  grid-template-columns: 1fr 100px 100px;
+  gap: 30px;
+}
+.register-grid-row.complemento-number{
+  grid-template-columns: 80% 20%;
+}
+.register-address-form .register-grid-row input{
+  width: inherit;
+  flex: 1;
+}
+
+
+.house-apartment{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.house-apartment button{
+  width: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+
+  background: none;
+  border: 2px solid #5C3D02;
+  border-radius: 5px;
+ 
+  cursor: pointer;
+}
+
+.house-apartment button img{
+  width: 90px;
+}
+
+.house-apartment button p {
+  font-family: 'Sen';
+  font-size: 16px;
+  font-weight:600;
+  color: #5C3D02;
+}
+
+
+.submit-button{
+  width: 200px;
+  margin: 40px auto;
+  padding: 10px 0px;
+  font-size: 20px;
+  font-family: 'Sen';
+  font-weight: 400;
+  border-radius: 40px;
+  border: 2px solid #D2A340;
+  color: #D2A340;
+  background: none;
+
+}
+
+
+@media (max-width:550px) {
+  .register-page-header{
+    font-size: 70px;
+    text-align: center;
+    line-height: 0.9;
+  }
+
+
+  .register-address-form .register-grid-row{
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

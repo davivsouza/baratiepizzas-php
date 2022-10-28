@@ -1,0 +1,109 @@
+
+.custom-radio-button input[type="radio"] {
+  /* Add if not using autoprefixer */
+  position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: transparent;
+  border: none;
+  /* Not removed via appearance */
+  margin: 0;
+  font: inherit;
+  color: #D2A340;
+  width: 120px;
+  height: 120px;
+  border: 3px solid #D2A340;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+
+input[type="radio"]::before {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #D2A340;
+}
+
+input[type="radio"]::after {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  transform: scale(0);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #fff;
+}
+
+input[type="radio"]:checked::before,
+input[type="radio"]:checked::after {
+  transform: scale(1);
+}
+
+
+
+
+.custom-radio-button{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Sen';
+  font-weight: 600;
+  color: #5C3D02;
+  cursor: pointer;
+}
+  
+.custom-radio-button input{
+  width: inherit;
+  cursor: pointer;
+}
+
+.custom-radio-button #house{
+  background-image: url('/assets/icons/house.png');
+  background-size: 90px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.custom-radio-button #apartment{
+  background-image: url('/assets/icons/apartment.png');
+  background-size: 90px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.custom-radio-button #pix{
+  background-image: url('/assets/icons/pix.png');
+  background-size: 90px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.custom-radio-button #visa{
+  background-image: url('/assets/icons/logos_visa.svg');
+  background-size: 90px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.custom-radio-button p{
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
