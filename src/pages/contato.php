@@ -1,14 +1,22 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<?php
+    session_start();
+    if($_SESSION['logado']){
+      $_SESSION['logado'] = true;
+    }else{
+      $_SESSION['logado'] = false;
+    }
+?> 
+<!DOCTYPE php>
+<php lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-  <link rel="manifest" href="/assets/icons/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/icons/site.webmanifest">
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/navbar.css">
   <link rel="stylesheet" href="../css/contato.css ">
@@ -25,29 +33,35 @@
       <ul class="nav-menu">
         <div class="first-column">
           <li class="nav-menuitem logo">
-            <a href="/">
-              <img src="/assets/icons/logo.svg" alt="Baratie Pizzas">
+            <a href="../../index.php">
+              <img src="../../assets/icons/logo.svg" alt="Baratie Pizzas">
             </a>
           </li>
-          <li class="nav-menuitem"><a href="/">Home</a></li>
-          <li class="nav-menuitem"><a href="./cardapio.html">Cardápio</a></li>
-          <li class="nav-menuitem"><a href="./contato.html">Contato</a></li>
+          <li class="nav-menuitem"><a href="../../index.php">Home</a></li>
+          <li class="nav-menuitem"><a href="./cardapio.php">Cardápio</a></li>
+          <li class="nav-menuitem"><a href="./contato.php">Contato</a></li>
         </div>
         <div class="second-column">
           <li class="nav-menuitem phone">
-            <img src="/assets/icons/phone.svg" alt="Telefone">
+            <img src="../../assets/icons/phone.svg" alt="Telefone">
             <span>
               704-914-3052
             </span>
           </li>
           <li class="user">
-            <a href="./login.html" title="Login/Registro">
-              <img src="/assets/icons/account.svg" alt="Cadastrar-se/Logar">
-            </a>
-          </li>
+              <?php if( $_SESSION['logado'] == false ):?>
+              <a href="./login.html" title="Login/Registro">
+                <img src="../../assets/icons/account.svg" alt="Cadastrar-se/Logar">
+                Login/Registro
+              </a>
+              <?php endif ?>
+              <?php if( $_SESSION['logado'] == true ):?>
+                  <a href="../php/logout.php">Sair</a>
+              <?php endif ?>
+            </li>
           <li class="carrinho">
-            <a href="./carrinho.html">
-              <img src="/assets/icons/shopping-cart.svg" alt="Carrinho">
+            <a href="./carrinho.php">
+              <img src="../../assets/icons/shopping-cart.svg" alt="Carrinho">
             </a>
           </li>
         </div>
@@ -61,28 +75,32 @@
             <span class="line line3"></span>
           </div>
           <ul class="menu-items">
-            <li class="nav-menuitem"><a href="/">Home</a></li>
-            <li class="nav-menuitem"><a href="./cardapio.html">Cardápio</a></li>
-            <li class="nav-menuitem"><a href="./contato.html">Contato</a></li>
-            <li class="nav-menuitem phone"><img src="/assets/icons/phone.svg" alt="Telefone"><span>704-914-3052</span>
+            <li class="nav-menuitem"><a href="../../index.php">Home</a></li>
+            <li class="nav-menuitem"><a href="./cardapio.php">Cardápio</a></li>
+            <li class="nav-menuitem"><a href="./contato.php">Contato</a></li>
+            <li class="nav-menuitem phone"><img src="../../assets/icons/phone.svg" alt="Telefone"><span>704-914-3052</span>
             </li>
             <li class="user">
-              <a href="./login.html" title="Login/Registro">
-                <img src="/assets/icons/account.svg" alt="Cadastrar-se/Logar">
-                Login/Register
+              <?php if( $_SESSION['logado'] == false ):?>
+              <a href="./login.php" title="Login/Registro">
+                <img src="../../assets/icons/account.svg" alt="Cadastrar-se/Logar">
+                Login/Registro
               </a>
-              
+              <?php endif ?>
+              <?php if( $_SESSION['logado'] == true ):?>
+                  <a href="../php/logout.php">Sair</a>
+              <?php endif ?>
             </li>
             <li class="carrinho">
-              <a href="./carrinho.html">
-                <img src="/assets/icons/shopping-cart.svg" alt="Carrinho">
+              <a href="./carrinho.php">
+                <img src="../../assets/icons/shopping-cart.svg" alt="Carrinho">
                 Carrinho
               </a>
             </li>
           </ul>
           <li class="nav-menuitem logo">
-            <a href="/">
-              <img src="/assets/icons/logo.svg" alt="Baratie Pizzas">
+            <a href="../../index.php">
+              <img src="../../assets/icons/logo.svg" alt="Baratie Pizzas">
             </a>
           </li>
         </div>
@@ -118,12 +136,12 @@
       </div>
       <div id="gallery">
         <div class="first-column">
-          <img src="/assets/backgrounds/greek-pizza.png" alt="Pizza Grega">
-          <img src="/assets/backgrounds/peperone-pizza.png" alt="Pizza de Peperone">
-          <img src="/assets/backgrounds/swiss-pizza.png" alt="Pizza Suíça">
+          <img src="../../assets/backgrounds/greek-pizza.png" alt="Pizza Grega">
+          <img src="../../assets/backgrounds/peperone-pizza.png" alt="Pizza de Peperone">
+          <img src="../../assets/backgrounds/swiss-pizza.png" alt="Pizza Suíça">
         </div>
         <div class="highlighted-image">
-          <img src="/assets/backgrounds/cut-pizza.png" alt="Cortando Pizza">
+          <img src="../../assets/backgrounds/cut-pizza.png" alt="Cortando Pizza">
         </div>
       </div>
     </section>
@@ -131,4 +149,4 @@
   </main>
 </body>
 
-</html>
+</php>

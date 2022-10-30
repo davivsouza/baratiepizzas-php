@@ -6,8 +6,8 @@
       $_SESSION['logado'] = false;
     }
 ?> 
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE php>
+<php lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -39,9 +39,9 @@
               <img src="./assets/icons/logo.svg" alt="Baratie Pizzas">
             </a>
           </li>
-          <li class="nav-menuitem"><a href="/">Home</a></li>
-          <li class="nav-menuitem"><a href="./src/pages/cardapio.html">Cardápio</a></li>
-          <li class="nav-menuitem"><a href="./src/pages/contato.html">Contato</a></li>
+          <li class="nav-menuitem"><a href="./index.php">Home</a></li>
+          <li class="nav-menuitem"><a href="./src/pages/cardapio.php">Cardápio</a></li>
+          <li class="nav-menuitem"><a href="./src/pages/contato.php">Contato</a></li>
         </div>
         <div class="second-column">
           <li class="nav-menuitem phone">
@@ -51,7 +51,7 @@
             </span>
           </li>
           <li class="user">
-          <?php if( $_SESSION['logado'] == false ):?>
+            <?php if( $_SESSION['logado'] == false ):?>
             <a href="./src/pages/login.html" title="Login/Registro">
               <img src="./assets/icons/account.svg" alt="Cadastrar-se/Logar">
             </a>
@@ -59,10 +59,10 @@
             <?php if( $_SESSION['logado'] == true ):?>
                 <a href="./src/php/logout.php">Sair</a>
             <?php endif ?>
-            </li>
+          </li>
          
           <li class="carrinho" title="Carrinho">
-            <a href="./src/pages/carrinho.html" title="Login/Registro">
+            <a href="./src/pages/carrinho.php" title="Login/Registro">
               <img src="./assets/icons/shopping-cart.svg" alt="Carrinho">
             </a>
           </li>
@@ -78,19 +78,23 @@
           </div>
           <ul class="menu-items">
             <li class="nav-menuitem"><a href="/">Home</a></li>
-            <li class="nav-menuitem"><a href="./src/pages/cardapio.html">Cardápio</a></li>
-            <li class="nav-menuitem"><a href="./src/pages/contato.html">Contato</a></li>
+            <li class="nav-menuitem"><a href="./src/pages/cardapio.php">Cardápio</a></li>
+            <li class="nav-menuitem"><a href="./src/pages/contato.php">Contato</a></li>
             <li class="nav-menuitem phone"><img src="./assets/icons/phone.svg" alt="Telefone"><span>704-914-3052</span>
             </li>
             <li class="user">
+              <?php if( $_SESSION['logado'] == false ):?>
               <a href="./src/pages/login.html" title="Login/Registro">
                 <img src="./assets/icons/account.svg" alt="Cadastrar-se/Logar">
-                Login/Register
+                Login/Registro
               </a>
-              
+              <?php endif ?>
+              <?php if( $_SESSION['logado'] == true ):?>
+                  <a href="./src/php/logout.php">Sair</a>
+              <?php endif ?>
             </li>
             <li class="carrinho">
-              <a href="./src/pages/carrinho.html">
+              <a href="./src/pages/carrinho.php">
                 <img src="./assets/icons/shopping-cart.svg" alt="Carrinho">
                 Carrinho
               </a>
@@ -210,7 +214,7 @@
             </button>
           </div>
 
-          <a href="./src/pages/cardapio.html" class="our-menu-show-more">Ver mais > </a>
+          <a href="./src/pages/cardapio.php" class="our-menu-show-more">Ver mais > </a>
         </div>
 
       </div>
@@ -260,4 +264,4 @@
   </main>
 </body>
 
-</html>
+</php>
