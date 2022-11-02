@@ -6,7 +6,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: #00000095;
+  background-color: #00000039;
 
   align-items: center;
   justify-content: center;
@@ -23,7 +23,7 @@
   max-width: 400px;
   width: 90%;
   border-radius: 10px 10px 0 0;
-  background-image: url('/assets/backgrounds/white-concrete-wallpaper.png');
+  background-image: url('../../assets/backgrounds/white-concrete-wallpaper.png');
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;

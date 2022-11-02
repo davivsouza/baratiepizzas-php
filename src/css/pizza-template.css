@@ -3,25 +3,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 15px;
 }
 
 .our-menu-item img {
-  width: 130px;
+  width: 110px;
+  height: 110px;
 }
 
 .our-menu-item-name {
   font-family: 'Sen';
-  font-size: 22px;
+  font-size: 18px;
   color: #fff;
   text-align: center;
+  margin-top: 20px;
 }
 
 .our-menu-item-description {
   font-family: 'Sen';
   font-size: 14px;
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 16px; 
+  max-height: 32px;     
+  /* The number of lines to be displayed */
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;
   color: #D7D7D7;
 }
 

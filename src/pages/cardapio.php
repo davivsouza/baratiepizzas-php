@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include("../php/api.php");
     if($_SESSION['logado']){
       $_SESSION['logado'] = true;
     }else{
@@ -113,84 +114,28 @@
       Nosso Cardápio
     </p>
     <section class="our-menu-grid">
+    <?php while($dado = $consulta->fetch_array()) { ?> 
       <div class="our-menu-item">
-        <img src="../../assets/temp/pizza-grega.png" alt="Pizza Grega">
-        <p class="our-menu-item-name">PIZZA GREGA</p>
+        <img src="<?php echo $dado["wallpaper_url"];?>" alt="Pizza Grega">
+        <p class="our-menu-item-name"><?php echo $dado["nome"];?></p>
         <p class="our-menu-item-description">
-          UMA PIZZA QUE VEIO DOS PRÓPRIOS DEUSES DO OLIMPO.
+        <?php echo $dado["descricao"];?>
         </p>
         <p class="our-menu-item-price">
-          R$ 30,00
+        R$ <?php echo $dado["valor"];?>
+
         </p>
-        <button type="button" class="our-menu-button">
+        <button type="button" class="our-menu-button" onclick='buyPizza(
+          "<?php echo $dado["nome"];?>",
+          "<?php echo $dado["descricao"];?>",
+          "<?php echo $dado["wallpaper_url"];?>",
+          "<?php echo $dado["valor"];?>"
+          )' 
+        >
           COMPRAR
         </button>
       </div>
-      <div class="our-menu-item">
-        <img src="../../assets/temp/pizza-grega.png" alt="Pizza Grega">
-        <p class="our-menu-item-name">PIZZA GREGA</p>
-        <p class="our-menu-item-description">
-          UMA PIZZA QUE VEIO DOS PRÓPRIOS DEUSES DO OLIMPO.
-        </p>
-        <p class="our-menu-item-price">
-          R$ 30,00
-        </p>
-        <button type="button" class="our-menu-button">
-          COMPRAR
-        </button>
-      </div>
-      <div class="our-menu-item">
-        <img src="../../assets/temp/pizza-grega.png" alt="Pizza Grega">
-        <p class="our-menu-item-name">PIZZA GREGA</p>
-        <p class="our-menu-item-description">
-          UMA PIZZA QUE VEIO DOS PRÓPRIOS DEUSES DO OLIMPO.
-        </p>
-        <p class="our-menu-item-price">
-          R$ 30,00
-        </p>
-        <button type="button" class="our-menu-button">
-          COMPRAR
-        </button>
-      </div>
-      <div class="our-menu-item">
-        <img src="../../assets/temp/pizza-grega.png" alt="Pizza Grega">
-        <p class="our-menu-item-name">PIZZA GREGA</p>
-        <p class="our-menu-item-description">
-          UMA PIZZA QUE VEIO DOS PRÓPRIOS DEUSES DO OLIMPO.
-        </p>
-        <p class="our-menu-item-price">
-          R$ 30,00
-        </p>
-        <button type="button" class="our-menu-button">
-          COMPRAR
-        </button>
-      </div>
-      <div class="our-menu-item">
-        <img src="../../assets/temp/pizza-grega.png" alt="Pizza Grega">
-        <p class="our-menu-item-name">PIZZA GREGA</p>
-        <p class="our-menu-item-description">
-          UMA PIZZA QUE VEIO DOS PRÓPRIOS DEUSES DO OLIMPO.
-        </p>
-        <p class="our-menu-item-price">
-          R$ 30,00
-        </p>
-        <button type="button" class="our-menu-button">
-          COMPRAR
-        </button>
-      </div>
-      <div class="our-menu-item">
-        <img src="../../assets/temp/pizza-grega.png" alt="Pizza Grega">
-        <p class="our-menu-item-name">PIZZA GREGA</p>
-        <p class="our-menu-item-description">
-          UMA PIZZA QUE VEIO DOS PRÓPRIOS DEUSES DO OLIMPO.
-        </p>
-        <p class="our-menu-item-price">
-          R$ 30,00
-        </p>
-        <button type="button" class="our-menu-button">
-          COMPRAR
-        </button>
-      </div>
+      <?php } ?>   
     </section>
   </main>
 </body>
