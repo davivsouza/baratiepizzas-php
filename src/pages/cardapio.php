@@ -8,7 +8,7 @@
     }
 ?> 
 <!DOCTYPE php>
-<php lang="pt-br">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -116,7 +116,7 @@
     <section class="our-menu-grid">
     <?php while($dado = $consulta->fetch_array()) { ?> 
       <div class="our-menu-item">
-        <img src="<?php echo $dado["wallpaper_url"];?>" alt="Pizza Grega">
+        <img src="<?php echo $dado["pizza_image_url"];?>" alt="Pizza Grega">
         <p class="our-menu-item-name"><?php echo $dado["nome"];?></p>
         <p class="our-menu-item-description">
         <?php echo $dado["descricao"];?>
@@ -140,4 +140,4 @@
   </main>
 </body>
 
-</php>
+        </html>

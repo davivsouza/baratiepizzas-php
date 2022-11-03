@@ -106,15 +106,15 @@ CREATE TABLE `tab_pizza` (
 -- Extraindo dados da tabela `tab_pizza`
 --
 
-INSERT INTO `tab_pizza` (`codprod`, `nome`, `descricao`, `ingrediente`, `valor`, `wallpaper_url`) VALUES
+INSERT INTO `tab_pizza` (`codprod`, `nome`, `descricao`, `ingrediente`, `valor`, `wallpaper_url`, `pizza_image_url`) VALUES
 (1, 'PIZZA GREGA', 'Uma pizza que veio dos próprios deuses do olimpo.', 'Berinjela, azeitona, molho de tomate, queijo mussarela e pimentão.', '33.00', 'https://i.pinimg.com/originals/6b/3e/63/6b3e63ebd7267e3e749743e5f185cf62.jpg', 'https://i.pinimg.com/originals/64/81/74/64817428f9b4098bd11a2aff090f771c.jpg'),
-(2, 'PIZZA ITALIANA', 'Uma pizza vinda diretamente do colisseu em roma.', 'Queijo mussarela, azeitona, cebola roxa, tomate, pimentão e carne seca.', '30.00', 'https://i.pinimg.com/originals/c5/d2/55/c5d255126b8aed07ffcd07c56c7ddf77.jpg'),
-(3, 'PIZZA SUIÇA', 'Uma pizza feita com ingredientes dos alpes suiços.', 'Queijo suiço, cogumelo champignon, calabresa, azeitona, manjericão e alecrim.', '27.00', 'https://i.pinimg.com/originals/00/13/d7/0013d70cce33fc89b131c05e6fb94876.jpg'),
-(4, 'PIZZA DE PEPPERONI', 'Uma pizza feita para aquelas pessoas que amam pepperoni.', 'Queijo mussarela, cogumelo champgnon, tomate, e azeitona.', '31.00','https://i.pinimg.com/originals/6a/00/f8/6a00f8471b61ff8f1b4fc5e9a5be0f0b.jpg'),
-(5, 'PIZZA DE FRANGO', 'Uma pizza para amantes de frango.', 'Queijo mussarela, frango em fatias, tomate cereja, azeitona, cebola roxa e manjericão.', '26.00','https://i.pinimg.com/originals/51/27/84/512784fb12e09cf6954da477c31d0919.jpg'),
-(6, 'PIZZA CANADENSE', 'Uma pizza saudável para quem quer manter a dieta.', 'Queijo mussarela, bacon, azeitona, tomate, pimentão, cebola roxa e calabresa.', '35.00', 'https://i.pinimg.com/originals/e4/5f/b4/e45fb48c53053beb395282a3dc8c9f68.jpg'),
-(7, 'PIZZA MARGHERITA', 'A mais tradicional pizza do mundo e uma das mais gostosas.', 'Queijo mussarela, manjericão e tomate.', '29.00','https://i.pinimg.com/originals/b6/ea/4a/b6ea4a2f40dbbacc2765505fb034f737.jpg'),
-(8, 'PIZZA BELGA', 'Uma bellísima pizza vinda diretamente da Bélgica.', 'queijo mussarela, bacon, azeitona, tomate, cebola, camarão e manjericão.', '32.00','https://i.pinimg.com/originals/36/da/f0/36daf0c17504659bd65ce76fe0548fd6.jpg');
+(2, 'PIZZA ITALIANA', 'Uma pizza vinda diretamente do colisseu em roma.', 'Queijo mussarela, azeitona, cebola roxa, tomate, pimentão e carne seca.', '30.00', 'https://i.pinimg.com/originals/c5/d2/55/c5d255126b8aed07ffcd07c56c7ddf77.jpg','https://i.pinimg.com/564x/bd/a2/77/bda2773e5c736854b8e8ea026d7b1a9f.jpg'),
+(3, 'PIZZA SUIÇA', 'Uma pizza feita com ingredientes dos alpes suiços.', 'Queijo suiço, cogumelo champignon, calabresa, azeitona, manjericão e alecrim.', '27.00', 'https://i.pinimg.com/originals/00/13/d7/0013d70cce33fc89b131c05e6fb94876.jpg', 'https://i.pinimg.com/564x/3f/1a/9d/3f1a9dc3d9283928e4d19a80e0715650.jpg'),
+(4, 'PIZZA DE PEPPERONI', 'Uma pizza feita para aquelas pessoas que amam pepperoni.', 'Queijo mussarela, cogumelo champgnon, tomate, e azeitona.', '31.00','https://i.pinimg.com/originals/6a/00/f8/6a00f8471b61ff8f1b4fc5e9a5be0f0b.jpg', 'https://i.pinimg.com/564x/1e/b0/cd/1eb0cde8460144e4980cd83b3b40691b.jpg'),
+(5, 'PIZZA DE FRANGO', 'Uma pizza para amantes de frango.', 'Queijo mussarela, frango em fatias, tomate cereja, azeitona, cebola roxa e manjericão.', '26.00','https://i.pinimg.com/originals/51/27/84/512784fb12e09cf6954da477c31d0919.jpg', 'https://i.pinimg.com/564x/6d/30/fb/6d30fb6ef3ba2ce646598216d0dae757.jpg'),
+(6, 'PIZZA CANADENSE', 'Uma pizza saudável para quem quer manter a dieta.', 'Queijo mussarela, bacon, azeitona, tomate, pimentão, cebola roxa e calabresa.', '35.00', 'https://i.pinimg.com/originals/e4/5f/b4/e45fb48c53053beb395282a3dc8c9f68.jpg', 'https://i.pinimg.com/564x/80/89/67/80896789a951c4573057a74688ec9c38.jpg'),
+(7, 'PIZZA MARGHERITA', 'A mais tradicional pizza do mundo e uma das mais gostosas.', 'Queijo mussarela, manjericão e tomate.', '29.00','https://i.pinimg.com/originals/b6/ea/4a/b6ea4a2f40dbbacc2765505fb034f737.jpg', 'https://i.pinimg.com/564x/0d/04/75/0d0475b80660207b2f54ea92ebacdb04.jpg'),
+(8, 'PIZZA BELGA', 'Uma bellísima pizza vinda diretamente da Bélgica.', 'queijo mussarela, bacon, azeitona, tomate, cebola, camarão e manjericão.', '32.00','https://i.pinimg.com/originals/36/da/f0/36daf0c17504659bd65ce76fe0548fd6.jpg', 'https://i.pinimg.com/564x/6b/ef/b5/6befb574dfcce2123dc662db7a96142f.jpg');
 
 -- --------------------------------------------------------
 

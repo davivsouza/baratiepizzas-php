@@ -7,7 +7,7 @@
     }
 ?> 
 <!DOCTYPE php>
-<php lang="pt-br">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -149,4 +149,4 @@
   </main>
 </body>
 
-</php>
+              </html>

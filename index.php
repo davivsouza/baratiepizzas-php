@@ -7,7 +7,7 @@
     }
 ?> 
 <!DOCTYPE php>
-<php lang="pt-br">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
-  <link rel="manifest" href="/assets/icons/site.webmanifest">
+  <link rel="manifest" href="./assets/icons/site.webmanifest">
   <link rel="stylesheet" href="./src/css/home.css">
   <link rel="stylesheet" href="./src/css/navbar.css">
   <link rel="stylesheet" href="./src/css/global.css">
@@ -35,7 +35,7 @@
       <ul class="nav-menu">
         <div class="first-column">
           <li class="nav-menuitem logo">
-            <a href="/">
+            <a href="./index.php">
               <img src="./assets/icons/logo.svg" alt="Baratie Pizzas">
             </a>
           </li>
@@ -77,7 +77,7 @@
             <span class="line line3"></span>
           </div>
           <ul class="menu-items">
-            <li class="nav-menuitem"><a href="/">Home</a></li>
+            <li class="nav-menuitem"><a href="./index.php">Home</a></li>
             <li class="nav-menuitem"><a href="./src/pages/cardapio.php">Cardápio</a></li>
             <li class="nav-menuitem"><a href="./src/pages/contato.php">Contato</a></li>
             <li class="nav-menuitem phone"><img src="./assets/icons/phone.svg" alt="Telefone"><span>704-914-3052</span>
@@ -101,7 +101,7 @@
             </li>
           </ul>
           <li class="nav-menuitem logo">
-            <a href="/">
+            <a href="./index.php">
               <img src="./assets/icons/logo.svg" alt="Baratie Pizzas">
             </a>
           </li>
@@ -264,4 +264,4 @@
   </main>
 </body>
 
-</php>
+              </html>
